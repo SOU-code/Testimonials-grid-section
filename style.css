@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.3rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.container {
+  width: 80%;
+  display: grid;
+  grid-template-areas:
+    "daniel daniel daniel daniel  jonathan kira "
+    "jeanette patrick patrick patrick patrick  kira ";
+  grid-gap: 2rem;
+}
+.profie {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 1rem;
+}
+.profile-des {
+  display: grid;
+  align-content: center;
+}
+.profile-image {
+  width: 4rem;
+  margin-right: 1rem;
+}
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-name {
+  font-weight: 700;
+}
+.heading {
+  margin-bottom: 1rem;
+}
+.box {
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(0, 0, 0, 0.153);
+}
+.daniel {
+  grid-area: daniel;
+  background-color: hsl(263, 55%, 52%);
+}
+.jonathan {
+  grid-area: jonathan;
+  background-color: hsl(217, 19%, 35%);
+}
+.kira {
+  grid-area: kira;
+  background-color: #fff;
+}
+.jeanette {
+  grid-area: jeanette;
+  background-color: #fff;
+}
+.patrick {
+  grid-area: patrick;
+  background-color: hsl(219, 29%, 14%);
+}
+.daniel .profile-name,
+.daniel .heading,
+.jonathan .profile-name,
+.jonathan .heading,
+.patrick .profile-name,
+.patrick .heading {
+  color: hsl(210, 46%, 95%);
+}
+.daniel .profile-edu,
+.daniel .speaks,
+.jonathan .profile-edu,
+.jonathan .speaks,
+.patrick .profile-edu,
+.patrick .speaks {
+  color: hsl(0, 0%, 81%);
+}
+.jeanette .profile-edu,
+.jeanette .speaks,
+.kira .profile-edu,
+.kira .speaks {
+  color: gray;
+}
+@media (max-width: 1025px) and (min-width: 675px) {
+  .container {
+    margin: 8rem 0;
+    grid-template-areas:
+      "daniel daniel daniel jonathan "
+      "jeanette patrick patrick patrick"
+      "kira kira kira kira";
+  }
+}
+@media (max-width: 674px) {
+  .container {
+    margin: 5rem 0;
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette "
+      "patrick"
+      "kira";
+  }
+}
